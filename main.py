@@ -136,7 +136,7 @@ async def on_startup1():
 
             
 async def scheduler():
-    aioschedule.every().day.at("22:30").do(on_startup1)
+    aioschedule.every().day.at("22:40").do(on_startup1)
     while True:
         await aioschedule.run_pending()
         await asyncio.sleep(1)
